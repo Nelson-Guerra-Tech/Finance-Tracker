@@ -1,39 +1,23 @@
 import { useState, useEffect } from 'react';
-// use auth from firebase any time you want to interact with the authentication
 import { projectAuth } from '../firebase.config';
 import { useAuthContext } from './useAuthContext';
 
-// custom hook
-export const useSignup = () => {
+export const useLogin = () => {
   const [isCancelled, setIsCanceled] = useState(false);
 
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
 
-  const signup = async (email, password, name) => {
+  const login = async (email, password) => {
     setError(null);
-    //   this just means that we are starting something and its loading
     setIsPending(true);
 
+    //   sign the user in
     try {
-      // signup user
-      const res = await projectAuth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
-      console.log(res.user);
+      const res = await projectAuth.signInWithEmailAndPassword(email, password);
 
-      // if connection is bad or response doesnt return
-      if (!res) {
-        throw new Error('Could not complete signup');
-      }
-
-      // update the name of the user
-      // add display name to user
-      await res.user.updateProfile({ name });
-
-      // dispatch login action
+      // dispatch logout action
       dispatch({ type: 'LOGIN', payload: res.user });
 
       // update state
@@ -52,9 +36,10 @@ export const useSignup = () => {
 
   useEffect(() => {
     return () => {
+      // cleanup function
       setIsCanceled(true);
     };
   }, []);
 
-  return { error, isPending, signup };
+  return { login, error, isPending };
 };
