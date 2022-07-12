@@ -4,7 +4,6 @@ import { useAuthContext } from './useAuthContext';
 
 export const useLogin = () => {
   const [isCancelled, setIsCanceled] = useState(false);
-
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
@@ -41,5 +40,5 @@ export const useLogin = () => {
     };
   }, []);
 
-  return { login, error, isPending };
+  return { login, isPending, error };
 };

@@ -6,12 +6,11 @@ import { useAuthContext } from './useAuthContext';
 // custom hook
 export const useSignup = () => {
   const [isCancelled, setIsCanceled] = useState(false);
-
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
 
-  const signup = async (email, password, name) => {
+  const signup = async (email, password, displayName) => {
     setError(null);
     //   this just means that we are starting something and its loading
     setIsPending(true);
@@ -31,7 +30,7 @@ export const useSignup = () => {
 
       // update the name of the user
       // add display name to user
-      await res.user.updateProfile({ name });
+      await res.user.updateProfile({ displayName });
 
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user });
@@ -56,5 +55,5 @@ export const useSignup = () => {
     };
   }, []);
 
-  return { error, isPending, signup };
+  return { signup, error, isPending };
 };

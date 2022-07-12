@@ -14,10 +14,6 @@
   align-items: center;
 }
 
-.navbar li {
-  text-decoration: none;
-}
-
 .title {
   margin-right: auto;
   font-weight: bold;
@@ -32,4 +28,5 @@
 
 .navbar a {
   color: #333;
+  text-decoration: none;
 }

@@ -5,7 +5,6 @@ import { useAuthContext } from './useAuthContext';
 // custom hook to logout users
 export const useLogout = () => {
   const [isCancelled, setIsCanceled] = useState(false);
-
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
