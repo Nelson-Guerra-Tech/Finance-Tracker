@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <ul>
-        <li className={styles.title}>Expense Tracker</li>
+        <li className={styles.title}>🌎 Earth Budget App</li>
 
         {!user && (
           <>

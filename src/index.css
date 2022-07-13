@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.2em;
+  background-color: #ffffff;
 }
 
 ul,
@@ -25,10 +26,10 @@ ul {
 
 .btn {
   background: none;
-  border: 2px solid #1f9751;
+  border: 2px solid #2ec4b6;
   padding: 6px 12px;
   border-radius: 10px;
-  color: #1f9751;
+  color: #2ec4b6;
   font-weight: bold;
   cursor: pointer;
   font-size: 1em;
@@ -37,7 +38,7 @@ ul {
 }
 
 .btn:hover {
-  background: #1f9751;
+  background: #2ec4b6;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

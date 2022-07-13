@@ -2,7 +2,7 @@
 
 .navbar {
   width: 100%;
-  background: #effaf0;
+  background: #cbf3f0;
   padding: 20px 10px;
   box-sizing: border-box;
 }
@@ -18,7 +18,7 @@
   margin-right: auto;
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .navbar button,
@@ -29,4 +29,15 @@
 .navbar a {
   color: #333;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .navbar button,
+  .navbar a {
+    margin-left: 0px;
+  }
 }

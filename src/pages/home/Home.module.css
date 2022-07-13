@@ -6,17 +6,20 @@
 }
 
 .content {
-  padding-right: 30px;
+  /* padding-right: 30px; */
+  margin: 0 1rem;
 }
 
 .sidebar {
-  padding-left: 30px;
+  /* padding-left: 30px; */
+  margin: 0 1rem;
 }
 
 .sidebar form {
   padding: 20px;
-  background: #1f9751;
+  background: #2ec4b6;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .sidebar input,
@@ -51,7 +54,8 @@
 }
 
 .sidebar h3 {
-  color: #1f9751;
+  color: #2ec4b6;
+  font-size: 1.8rem;
   margin-bottom: 20px;
 }
 
@@ -74,7 +78,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  border-left: 4px solid #1f9751;
+  border-left: 5px solid #8ac926;
   border-radius: 10px;
   user-select: none;
   transition: all 0.3s ease-in-out;
@@ -107,4 +111,12 @@
   line-height: 0;
   font-size: 0.9em;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column-reverse;
+  }
 }
