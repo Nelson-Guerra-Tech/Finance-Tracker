@@ -4,15 +4,15 @@
   <h1 align="center">Developer Project Management App ✨</h1>
 
   <p align="center">
-    It is a React application for developers to manage project with groups or a team. The app uses Firebase as a backend for user authentication. . The user can add a project, comment on projects, mark project as complete, and see users online/offline. Site URL / Demo: 
-    <a href="https://react-wordle-updated-clone.netlify.app/">https://andromeda-management.web.app/login</a>
+    It is a React application for users to track their expenses. The expense tracker uses Firebase as the backend and allows users to create their own account by email and password, that way each user can privately track expenses. Site URL / Demo: 
+    <a href="https://expense-tracker-3fa3a.web.app/login">https://expense-tracker-3fa3a.web.app/login</a>
     <br />
     <br />
     <a href="https://nelson-guerra.tech">About Me</a>
   </p>
 </p>
 
-[![Site preview](/public/social-image.png)](https://andromeda-management.web.app/login)
+[![Site preview](/public/social-image.png)](https://expense-tracker-3fa3a.web.app/login)
 
 ## Table of Contents
 
