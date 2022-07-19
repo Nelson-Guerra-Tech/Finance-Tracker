@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">Developer Project Management App ✨</h1>
+  <h1 align="center">React Expense Tracker App ✨</h1>
 
   <p align="center">
     It is a React application for users to track their expenses. The expense tracker uses Firebase as the backend and allows users to create their own account by email and password, that way each user can privately track expenses. Site URL / Demo: 
